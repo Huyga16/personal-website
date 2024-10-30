@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hear Me Out</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        .move-random {
+            position: relative; /* Cần định vị để di chuyển */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tenor-gif-embed" data-postid="14669531" data-share-method="host" data-aspect-ratio="1.30612" data-width="100%">
+            <a href="https://tenor.com/view/milk-and-mocha-bears-poke-angry-gif-14669531">Milk And Mocha Bears Poke GIF</a>from <a href="https://tenor.com/search/milk+and+mocha+bears-gifs">Milk And Mocha Bears GIFs</a>
+            </div> 
+            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <p>Do you love me? 🤨</p>
+        <div class="btn">
+            <a href="yes.html">Yes</a>
+            <a href="#" id="moveRandom" class="move-random">No</a>
+        </div>
+    </div>
+
+    <script>
+        function moveRandom(elem) {
+            elem.style.position = 'absolute';
+            elem.style.top = Math.floor(Math.random() * 90 + 5) + '%'; // Giới hạn 5%-95%
+            elem.style.left = Math.floor(Math.random() * 90 + 5) + '%'; // Giới hạn 5%-95%
+        }
+
+        const moveRandomElement = document.getElementById("moveRandom");
+
+        moveRandomElement.addEventListener("click", function() {
+            // Bắt đầu di chuyển khi nhấn vào "No"
+            setInterval(function() {
+                moveRandom(moveRandomElement);
+            }, 500); // Di chuyển mỗi 500ms
+        });
+    </script>
+</body>
+</html>
